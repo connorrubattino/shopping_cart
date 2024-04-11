@@ -1,0 +1,22 @@
+command line steps to get environment up and running
+
+npm init 
+npm install typescript --save-dev
+sudo npm install -g typescript
+tsc --init
+tsc index.ts
+                    Setup the location of the inputted TS files
+                "rootDir": "./src",
+            Setup the location for the outputed js files
+                "outDir": "./dist"
+
+                
+            package.json Settings: The name needs to be lowercased with not spaces
+            To run the TS on node:
+            add
+            "start": "tsc && node ./dist/index.js",
+            to the "scripts" section
+npm i uuid
+npm i --save-dev @types/uuid
+
+*****also need index.ts in src file and index.js in dist file
