@@ -34,14 +34,26 @@ function createItem(itemName:string, price:number, description:string):Item{
 }
 
 //add to cart function
-function addToCart(itemAdd:Item, user:User):void {
-    user.cart.push(itemAdd)
+function addToCart(item:Item, user:User):void {
+    user.cart.push(item)
+    console.log(`${item.itemName} has been added to ${user.userName}'s cart`)
 }
 
 //remove from cart function
 function removeFromCart(itemRemove:Item, user:User):void {
     user.cart = user.cart.filter(item => item.itemId !== itemRemove.itemId)
+    console.log(`All ${itemRemove.itemName}'s have been removed from ${user.userName}'s cart`)
 }
+
+
+function removeQuantityFromCart(item:Item, user:User, quantity:number):void {
+    for (let i=0; i < quantity; i++){
+        let indexOfItem = user.cart.findIndex(cartItem => cartItem.itemId == item.itemId)
+        user.cart.splice(indexOfItem, 1);
+    }
+    console.log(`${quantity} ${item.itemName}(s) have been removed from ${user.userName}'s cart`)
+}
+
 
             //remove quantity from cart
             // function removeQuantityFromCart(item:Item, user:User, quantityToRemove:number):void {
@@ -72,6 +84,7 @@ function printCart(user:User):void {
     for (let item of user.cart) {
         console.log(`${item.itemName} -- ${item.price}`)
     }
+    console.log(`Total: $${cartTotal(user)}`)
 }
 
 
@@ -113,3 +126,9 @@ let conTotal4 = cartTotal(connor);
 console.log(conCart4);
 console.log(conTotal4);
 
+
+removeQuantityFromCart(hat, connor, 1);
+let conCart5 = printCart(connor);
+let conTotal5 = cartTotal(connor);
+console.log(conCart5);
+console.log(conTotal5);

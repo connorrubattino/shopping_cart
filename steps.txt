@@ -9,8 +9,7 @@ tsc index.ts
                 "rootDir": "./src",
             Setup the location for the outputed js files
                 "outDir": "./dist"
-
-                
+ 
             package.json Settings: The name needs to be lowercased with not spaces
             To run the TS on node:
             add
@@ -20,3 +19,5 @@ npm i uuid
 npm i --save-dev @types/uuid
 
 *****also need index.ts in src file and index.js in dist file
+
+npm run start
