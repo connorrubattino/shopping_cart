@@ -94,41 +94,42 @@ console.log(connor)
 let golfBall = createItem("golf ball", 5, "little white ball")
 let shoe = createItem("shoe", 25, "bball shoes")
 let hat = createItem("hat", 50, "gucci hat")
-console.log(golfBall)
-console.log(shoe)
-console.log(hat)
+// console.log(golfBall)
+// console.log(shoe)
+// console.log(hat)
 
 addToCart(golfBall,connor);
-let conCart = printCart(connor);
-let conTotal = cartTotal(connor);
-console.log(conCart);
-console.log(conTotal);
+// let conCart = printCart(connor);
+// let conTotal = cartTotal(connor);
+// console.log(conCart);
+// console.log(conTotal);
 
 addToCart(shoe,connor);
 addToCart(shoe,connor);
 addToCart(shoe,connor);
-let conCart2 = printCart(connor);
-let conTotal2 = cartTotal(connor);
-console.log(conCart2);
-console.log(conTotal2);
+// let conCart2 = printCart(connor);
+// let conTotal2 = cartTotal(connor);
+// console.log(conCart2);
+// console.log(conTotal2);
 
 addToCart(hat,connor);
 addToCart(hat,connor);
 addToCart(hat,connor);
-let conCart3 = printCart(connor);
-let conTotal3 = cartTotal(connor);
-console.log(conCart3);
-console.log(conTotal3);
+// let conCart3 = printCart(connor);
+// let conTotal3 = cartTotal(connor);
+// console.log(conCart3);
+// console.log(conTotal3);
 
 removeFromCart(shoe,connor);
-let conCart4 = printCart(connor);
-let conTotal4 = cartTotal(connor);
-console.log(conCart4);
-console.log(conTotal4);
+// let conCart4 = printCart(connor);
+// let conTotal4 = cartTotal(connor);
+// console.log(conCart4);
+// console.log(conTotal4);
 
 
 removeQuantityFromCart(hat, connor, 1);
-let conCart5 = printCart(connor);
-let conTotal5 = cartTotal(connor);
-console.log(conCart5);
-console.log(conTotal5);
+// let conCart5 = printCart(connor);
+// let conTotal5 = cartTotal(connor);
+// console.log(conCart5);
+// console.log(conTotal5);
+printCart(connor)
